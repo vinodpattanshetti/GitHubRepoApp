@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
 import com.example.vinod.githubrepoapp.R
@@ -133,6 +134,8 @@ class GitHubInputActivity : AppCompatActivity(), MainViewInterface {
 
     mBinder.btSubmit.setOnClickListener {
       mBinder.pbProgress.showView()
+      mBinder.etInputRepoName.onEditorAction(EditorInfo.IME_ACTION_DONE)
+      mBinder.etInputUserName.onEditorAction(EditorInfo.IME_ACTION_DONE)
       mMainPresenter?.fetchGitRepositoryList(
         gitHubUserName, gitHubRepositoryName, OPEN_KEY
       )

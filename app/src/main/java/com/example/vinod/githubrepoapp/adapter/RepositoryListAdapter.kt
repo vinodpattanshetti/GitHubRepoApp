@@ -52,7 +52,7 @@ class RepositoryListAdapter(
         mGitRepoList[position].requestedReviewers.toString().capitalizeFirstLetterOfWords()
       ).fromHtml()
       root.context?.let {
-        Glide.with(it).load(mGitRepoList[position].user.avatarUrl)
+        Glide.with(it).load(mGitRepoList[position].user?.avatarUrl)
           .apply(RequestOptions.placeholderOf(R.color.colorPrimary))
           .into(holder.mBinder.ivImageView.let { mImageView -> mImageView })
       }
