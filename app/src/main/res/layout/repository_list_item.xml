@@ -16,8 +16,8 @@
 
             <ImageView
                 android:id="@+id/iv_image_view"
-                android:layout_width="96dp"
-                android:layout_height="0dp"
+                android:layout_width="@dimen/dimen_width"
+                android:layout_height="@dimen/dimen_height"
                 android:layout_marginBottom="0dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +80,8 @@
                 android:layout_marginTop="@dimen/dimen_4"
                 android:layout_marginEnd="@dimen/dimen_8"
                 android:layout_marginRight="@dimen/dimen_8"
+                android:maxLines="3"
+                android:ellipsize="end"
                 android:textColor="@color/color_333333"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_image_view"
