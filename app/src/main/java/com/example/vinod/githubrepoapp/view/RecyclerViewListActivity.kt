@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.Toast
 
 import com.example.vinod.githubrepoapp.R
 import com.example.vinod.githubrepoapp.adapter.RepositoryListAdapter
@@ -36,7 +37,7 @@ class RecyclerViewListActivity : AppCompatActivity(), RepositoryListAdapter.IAct
   }
 
   override fun onItemSelected(mGitRepoDatum: OpenPullRequest, position: Int) {
-
+    Toast.makeText(this, "Position : "+position+"is clicked", Toast.LENGTH_LONG).show()
   }
 
 }
